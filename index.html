@@ -4,12 +4,53 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, inital-scale=1.0"/>
   <title>Zane Richards</title>
-  <link rel = "stylesheet" href="zaneweb.css"/>
+  <link rel = "stylesheet" href="styles.css"/>
 </head>
 
   <body>
-    <h1>Zane Richards</h1> 
-    <button onClick = "alertButton()"> Click Me </button>
+    <header>
+      <div class="nav-container">
+        <nav id="navbar">
+          <img src="images/Zane_Logo.png" class="logo" width="140px">
+          <ul id="nav-links">
+            <li><a class="nav-link" href="#welcome-section">Home</a></li>
+            <li><a class="nav-link" href="#about">About</a></li>
+            <li><a class="nav-link" href="#projects">Projects</a></li>
+            <li><a class="nav-link" href="#contact">Contact</a></li>
+            
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="main-content">
+      <section id="welcome-section">
+        <h1>Hello, my name is Zane!</h1>
+       </section>
+    
+       <section id="about">
+        <h1>About me!</h1>
+       </section>
+          
+       <section id="projects">
+          <ul id="project-list">
+            <div id="Project_1">
+              <h2 class="project-title">Project 1</h2>
+            </div>
+    
+            <div id="Project_1">
+              <h2 class="project-title">Project 2</h2>
+            </div>
+          </ul>
+       </section>
+    
+       <section id="contact">
+          <ul id="contact-list">
+            <li><a class="nav-link" href="">Github</a></li>
+            <li><a class="nav-link" href="">Linkedin</a></li>
+          </ul>
+       </section>
+    </div>
+
   </body>
-  <script src = "zaneweb.js"></script>
 </html>

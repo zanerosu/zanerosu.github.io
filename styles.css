@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
+
+:root{
+    --red-accent-color: rgb(255,28,77);
+    --main-background-color: #1f1f1f
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background:var(--main-background-color);
+    color:white;
+    font-family:"Poppins", sans-serif;
+}
+
+header{
+    width:100%;
+    height:auto;
+    position: fixed;
+    background: var(--main-background-color);
+}
+
+.nav-container, .main-content{
+    padding:10px 10%;
+}
+
+
+
+nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav ul li{
+    display:inline-block;
+    list-style: none;
+    margin:10px 20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+/* Creates bar under nav links */
+nav ul li a::after{
+    content: '';
+    width:0;
+    height:3px;
+    background: var(--red-accent-color);
+    position: absolute;
+    left:0;
+    bottom:-6px;
+    transition: 0.5s;
+}
+
+/* Animation for bar appearing under links on hover */
+
+nav ul li a:hover::after{
+    width:100%;
+}
+
+
+#welcome-section{
+    padding-top:67.78px;
+}
