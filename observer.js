@@ -23,7 +23,7 @@ const appearOnScroll = new IntersectionObserver(function(
     appearOnScroll.observe(fader);
   });
 
-
+  
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
 
