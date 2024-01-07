@@ -1,0 +1,389 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
+
+:root{
+    --red-accent-color: rgb(255,28,77);
+    --main-background-color: #1f1f1f;
+    --secondary-background-color: #111111;
+    --secondary-red-accent-color: rgb(255, 56, 99);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background:var(--main-background-color);
+    color:white;
+    font-family:"Poppins", sans-serif;
+}
+
+.main-content{
+    margin: 0 auto;
+}
+
+header{
+    width:100%;
+    height:auto;
+    position: sticky;
+    top:0;
+    background: var(--main-background-color);
+}
+
+.section-container{
+    max-width: 1500px;
+}
+
+
+/* NAV BAR */
+.nav-container{
+    padding:0px 10%;
+}
+
+nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav ul li{
+    display:inline-block;
+    list-style: none;
+    margin:10px 20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+/* Creates bar under nav links */
+nav ul li a::after{
+    content: '';
+    width:0;
+    height:3px;
+    background: var(--red-accent-color);
+    position: absolute;
+    left:0;
+    bottom:-6px;
+    transition: 0.5s;
+}
+/* Animation for bar appearing under links on hover */
+nav ul li a:hover::after{
+    width:100%;
+}
+
+/* WELCOME SECTION */
+#welcome-section > .section-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1500px;
+}
+
+#welcome-section{
+    padding:0 8%;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom left, var(--secondary-background-color), rgb(39, 39, 39));
+}
+
+#welcome-text{
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    align-items: flex-start;
+}
+#welcome-img{
+    display: flex;
+    width:50%;
+    justify-content: center;
+}
+
+.header-text{
+    font-size: 4em;
+}
+
+#welcome-section h2{
+    font-size: 2em;
+    color:var(--red-accent-color);
+    font-family:"Nunito", sans-serif;
+    font-style: italic;
+}
+
+#welcome-section img{
+    width:100%;
+    height:auto;
+}
+
+
+/* ABOUT SECTION */
+#about > .section-container{
+    display: flex;
+    justify-content: center;
+    max-width: 1500px;
+    gap: 100px;
+}
+
+
+#about{
+    padding:0 8%;
+    background: var(--secondary-background-color);
+    height:fit-content;
+    min-height: 950px;
+    display:flex;
+    justify-content: center;
+    padding: 100px 0;
+    
+}
+
+#about-col-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 60px;
+    gap: 20px;
+}
+
+#about-col-2{
+    flex-basis:60%;
+}
+
+#about h1{
+    margin: 0 auto 0 auto;
+    font-size:3em;
+}
+
+#about .about-me{
+    font-size: 20px;
+    color:rgb(207, 207, 207);
+}
+
+.tab-titles{
+    display: flex;
+    margin:20px 0 40px;
+}
+
+.tab-links{
+    margin-right:50px;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content:'';
+    width:0;
+    height:3px;
+    background:var(--red-accent-color);
+    position: absolute;
+    left:0;
+    bottom:-8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width:50%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin:10px 0;
+    font-size: 20px;
+}
+
+.tab-contents ul li span{
+    color:var(--secondary-red-accent-color);
+    font-size: 16px;
+}
+
+.tab-contents .company-name{
+    font-size:20px;
+    font-style: italic;
+    color:white;
+    font-weight: bold;
+}
+
+.tab-contents{
+    display:none;
+}
+
+#honors-text{
+    position: relative;
+    font-size: 16px;
+    left:20px;
+    list-style:circle;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+.fade-in{
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear{
+    opacity: 1;
+}
+
+/* PROJECT SECTION */
+#projects{
+    padding:0 8%;
+    background: var(--main-background-color);
+    padding-top: 100px;
+    height: 100vh;
+    max-width: 1600px;
+    margin:0 auto;
+}
+
+#projects h1{
+    font-size: 3em;
+    margin: 0px auto;
+    text-align:center;
+}
+
+.projects-subtext{
+    font-size: 18px;
+    text-align: center;
+    position: relative;
+}
+
+.projects-subtext::after{
+    content:'';
+    width:60%;
+    height:8px;
+    background:var(--red-accent-color);
+    position: absolute;
+    left:20%;
+    bottom:-15px;
+    border-radius: 5px;
+}
+
+.project-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    place-items: center;
+    gap:40px;
+    padding-top: 50px;
+    align-items: stretch;
+}
+
+@media (min-width: 768px) {
+    .project-grid {
+        grid-template-columns: repeat(3, 1fr); /* Show at most 3 projects per row on larger screens */
+    }
+}
+
+.project-tile{
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: var(--secondary-background-color);
+    padding-bottom: 10px;
+    max-width: 350px;
+}
+
+.project-tile img{
+    width:100%;
+    height:350px;
+    object-fit: contain;
+    border-bottom:3px solid var(--red-accent-color);
+}
+
+.project-title{
+    padding:10px;
+    text-align: center;
+}
+
+.project-tile a:hover{
+    color:var(--red-accent-color)
+}
+
+.project-tile a{
+    text-decoration: none;
+    color:white;
+}
+
+.project-tile p{
+    text-align: center;
+    font-size: 20px
+}
+
+.project-tile p:hover{
+    color:var(--red-accent-color)
+}
+
+.more-projects{
+    text-align: center;
+    padding-top:60px;
+    font-size: 24px;
+}
+
+/* CONTACT SECTION */
+
+#contact{
+    padding:0 8%;
+    background: var(--secondary-background-color);
+    height:1000px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+#contact h1{
+    font-size: 3em;
+    margin: 0px auto;
+    text-align:center;
+}
+
+#contact > .section-container{
+    display: flex;
+    justify-content: center;
+    max-width: 1500px;
+    gap: 100px;
+    padding-bottom: 200px;
+    padding-top: 20px;
+}
+
+.social-link{
+    display: flex;
+    align-items: center;
+}
+
+.social-link > a{
+    text-decoration: none;
+    color:white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-out;
+}
+
+.social-link > a:hover{
+    transform:translateY(8px);
+}
+
+.social-name{
+    font-size: 28px;
+    position: relative;
+    left:10px
+}
