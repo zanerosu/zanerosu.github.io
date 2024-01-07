@@ -141,10 +141,12 @@ nav ul li a:hover::after{
 #about{
     padding:0 8%;
     background: var(--secondary-background-color);
-    height:1000px;
+    height:fit-content;
+    min-height: 950px;
     display:flex;
     justify-content: center;
-    padding-top: 100px;
+    padding: 100px 0;
+    
 }
 
 #about-col-1{
@@ -327,6 +329,12 @@ nav ul li a:hover::after{
     color:var(--red-accent-color)
 }
 
+.more-projects{
+    text-align: center;
+    padding-top:60px;
+    font-size: 24px;
+}
+
 /* CONTACT SECTION */
 
 #contact{
@@ -367,22 +375,15 @@ nav ul li a:hover::after{
     flex-direction: row;
     align-items: center;
     cursor: pointer;
+    transition: transform 0.3s ease-out;
 }
 
 .social-link > a:hover{
-    color:var(--red-accent-color);
+    transform:translateY(8px);
 }
 
 .social-name{
     font-size: 28px;
     position: relative;
     left:10px
-}
-
-#email-social{
-    cursor:default;
-}
-
-#email-social:hover{
-    color:white
 }
