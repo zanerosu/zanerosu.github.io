@@ -112,6 +112,10 @@ nav ul li a:hover::after{
     justify-content: center;
 }
 
+#welcome-logo{
+    max-width: 625px;
+}
+
 .header-text{
     font-size: 4em;
 }
