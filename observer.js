@@ -48,3 +48,30 @@ function openmenu(){
 function closemenu(){
     sidemenu.style.right = "-200px";
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  const images = document.querySelectorAll(".slideshow img");
+  let currentImageIndex = 0;
+  let isTransitioning = false;
+
+  function showImage(index) {
+    if (isTransitioning) return; // Prevent overlapping transitions
+    isTransitioning = true;
+    images.forEach(img => img.classList.remove("active"));
+    images[index].classList.add("active");
+    setTimeout(() => {
+      isTransitioning = false;
+    }, 2000); // Adjust the timeout to match the transition duration
+  }
+
+  function nextImage() {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    showImage(currentImageIndex);
+  }
+
+  // Initial setup
+  showImage(currentImageIndex);
+
+  // Automatically change image every 4 seconds (adjust as needed)
+  setInterval(nextImage, 2000); // Adjust the interval to match transition duration + desired delay
+});

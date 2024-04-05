@@ -249,6 +249,10 @@ nav ul li a:hover::after{
     opacity: 1;
 }
 
+.slideshow{
+    display: none;
+}
+
 
 /* PROJECT SECTION */
 #projects{
@@ -472,7 +476,11 @@ nav .fas{
 
     #about{
         width: 100%;
-        min-height: fit-content;
+        min-height: 850px;
+    }
+
+    #education{
+        width: 90%;
     }
 
     #about-col-2{
@@ -518,6 +526,37 @@ nav .fas{
 
     .tab-titles{
         justify-content: center;
+    }
+
+    .slideshow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 25%;
+        /* position: relative; */
+        width: 100%;
+        height: auto; /* Adjust as needed */
+        overflow: hidden; /* Ensure images stay within the container */
+      }
+      
+      .slideshow img {
+        position: absolute;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+      
+      .slideshow img.active {
+        opacity: 1 !important;
+      }
+
+    #mobileUM{
+        width: 150px;
+    }
+    #mobileFord{
+        width: 250px;
+    }
+    #mobileConti{
+        width: 300px;
     }
 
     /* PROJECTS SECTION  */
