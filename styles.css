@@ -17,10 +17,11 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    z-index: 1;
 }
 
 body {
+    width:100%;
     background:var(--main-background-color);
     color:white;
     font-family:"Poppins", sans-serif;
@@ -36,7 +37,7 @@ header{
     position: sticky;
     top:0;
     background: var(--main-background-color);
-    z-index: 1;
+    z-index: 2;
 }
 
 .section-container{
@@ -113,6 +114,32 @@ nav ul li a:hover::after{
     justify-content: center;
 }
 
+@media only screen and (max-width: 1000px){
+    #welcome-section{
+        display: flex;
+        align-items: flex-start;
+        padding-top: 10%;
+        padding-bottom: 10%;
+        height: fit-content;
+        
+    }
+
+    #welcome-section > .section-container{
+        padding-top: 0px;
+        display:flex;
+        flex-direction: column-reverse;
+    }
+    
+    #welcome-img{
+        width: 100%;
+    }
+
+    #welcome-text{
+        width: 100%;
+        font-size: 1rem;
+    }
+}
+
 #welcome-logo{
     max-width: 625px;
 }
@@ -161,6 +188,13 @@ nav ul li a:hover::after{
     justify-content: center;
     padding-bottom: 60px;
     gap: 20px;
+}
+
+@media only screen and (max-width: 1000px){
+    #about-col-1{
+        display: none;
+    }
+    
 }
 
 #about-col-2{
@@ -253,7 +287,8 @@ nav ul li a:hover::after{
     padding:0 8%;
     background: var(--main-background-color);
     padding-top: 100px;
-    height: 100vh;
+    height: fit-content;
+    padding-bottom: 10%;
     max-width: 1600px;
     margin:0 auto;
 }
@@ -414,55 +449,7 @@ nav .fas{
     display:none;
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 1000px){
 
-    body, html {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
     
-    .section-container {
-        width: 100%;
-    }
-    
-    .social-link{
-        flex-direction: column;
-    }
-
-    .nav-container{
-        padding:0px 10%;
-    }
-
-    .header-text{
-        margin-top: 100%;
-        font-size: 16px;
-    }
-
-    .header-text h1{
-        font-size: 30px;
-    }
-
-    nav .fas{
-        display:block;
-        font-size:25px;
-    }
-
-    nav ul{
-        background: var(--red-accent-color);
-        position: fixed;
-        top:0;
-        right:0;
-        width:200px;
-        height:100vh;
-        padding-top:50px;
-    }
-
-    #welcome-section > .section-container{
-        flex-direction: column-reverse;
-    }
-
-    #welcome-section{
-        min-height: -webkit-fill-available;
-    }
 }
