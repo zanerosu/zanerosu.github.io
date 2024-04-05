@@ -114,32 +114,6 @@ nav ul li a:hover::after{
     justify-content: center;
 }
 
-@media only screen and (max-width: 1000px){
-    #welcome-section{
-        display: flex;
-        align-items: flex-start;
-        padding-top: 10%;
-        padding-bottom: 10%;
-        height: fit-content;
-        
-    }
-
-    #welcome-section > .section-container{
-        padding-top: 0px;
-        display:flex;
-        flex-direction: column-reverse;
-    }
-    
-    #welcome-img{
-        width: 100%;
-    }
-
-    #welcome-text{
-        width: 100%;
-        font-size: 1rem;
-    }
-}
-
 #welcome-logo{
     max-width: 625px;
 }
@@ -188,13 +162,6 @@ nav ul li a:hover::after{
     justify-content: center;
     padding-bottom: 60px;
     gap: 20px;
-}
-
-@media only screen and (max-width: 1000px){
-    #about-col-1{
-        display: none;
-    }
-    
 }
 
 #about-col-2{
@@ -282,6 +249,7 @@ nav ul li a:hover::after{
     opacity: 1;
 }
 
+
 /* PROJECT SECTION */
 #projects{
     padding:0 8%;
@@ -340,6 +308,11 @@ nav ul li a:hover::after{
     max-width: 350px;
 }
 
+.project-tile:hover{
+    transform:translateY(20px);
+    transition: transform 0.5s ease-out;
+}
+
 .project-tile img{
     width:100%;
     height:350px;
@@ -377,11 +350,10 @@ nav ul li a:hover::after{
 }
 
 /* CONTACT SECTION */
-
 #contact{
     padding:0 8%;
     background: var(--secondary-background-color);
-    height:1000px;
+    height:100vh;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -404,22 +376,9 @@ nav ul li a:hover::after{
     padding-top: 20px;
 }
 
-@media only screen and (max-width: 1000px){
-    #contact > .section-container{
-        flex-direction: column;
-        gap:50px;
-    }
-}
-
 .social-link{
     display: flex;
     align-items: center;
-}
-
-@media only screen and (max-width: 1000px){
-    .social-link{
-        flex-direction: column;
-    }
 }
 
 .social-link > a{
@@ -443,7 +402,7 @@ nav ul li a:hover::after{
 }
 
 
-/* Mobile STYLING */
+/* Mobile styling */
 
 nav .fas{
     display:none;
@@ -451,5 +410,153 @@ nav .fas{
 
 @media only screen and (max-width: 1000px){
 
+    /* NAVIGATION SIDEBAR */
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul {
+        background-color: var(--red-accent-color);
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    #welcome-section{
+        display: flex;
+        align-items: flex-start;
+        padding-top: 10%;
+        padding-bottom: 10%;
+        height: fit-content;
+        
+    }
+
+    /* WELCOME SECTION */
+    #welcome-section > .section-container{
+        padding-top: 0px;
+        display:flex;
+        flex-direction: column-reverse;
+    }
     
+    #welcome-img{
+        width: 100%;
+    }
+
+    #welcome-text{
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    /* ABOUT ME SECTION */
+    #about-col-1{
+        display: none;
+    }
+
+    #about{
+        width: 100%;
+        min-height: fit-content;
+    }
+
+    #about-col-2{
+        width: 100%;
+        flex-basis: 100%;
+        font-size: 14px;
+    }
+    .about-me{
+        font-size: 14px !important;
+    }
+
+    .tab-links{
+        font-size: 18px !important;
+        margin-right: 20px;
+    }
+
+    #about > .section-container{
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+        gap: 100px;
+    }
+
+    .tab-contents ul li{
+        font-size: 14px;
+    }
+    
+    .tab-contents ul li span{
+        font-size: 14px;
+    }
+    
+    .tab-contents .company-name{
+        font-size:14px;
+    }
+    
+    .tab-contents{
+        display:none;
+    }
+    
+    #honors-text{
+        font-size: 14px;
+    }
+
+    .tab-titles{
+        justify-content: center;
+    }
+
+    /* PROJECTS SECTION  */
+    #projects{
+        padding-top: 30px;
+    }
+    
+    #projects > h1{
+        font-size: 38px !important;
+        padding-bottom: 10px;
+    }
+    
+    .project-grid{
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    .project-tile{
+        max-width: 300px;
+    }
+
+
+    /* CONTACT SECION */
+    #contact > h1{
+        font-size: 38px !important;
+    }
+
+    #contact > .section-container{
+        flex-direction: column;
+        gap:50px;
+    }
+
+    .social-link{
+        flex-direction: column;
+        font-size: 18px;
+    }
+
+    .social-name{
+        font-size: 22px;
+    }
+
 }
+
