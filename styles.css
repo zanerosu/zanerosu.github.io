@@ -80,6 +80,10 @@ nav ul li a::after{
     bottom:-6px;
     transition: 0.5s;
 }
+
+#mobile-nav:hover{
+    cursor: pointer;
+}
 /* Animation for bar appearing under links on hover */
 nav ul li a:hover::after{
     width:100%;
@@ -289,27 +293,34 @@ nav ul li a:hover::after{
 }
 
 .project-grid{
+    max-width: 1200px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     place-items: center;
     gap:40px;
     padding-top: 50px;
     align-items: stretch;
+    margin: 0 auto;
 }
 
 @media (min-width: 768px) {
     .project-grid {
-        grid-template-columns: repeat(3, 1fr); /* Show at most 3 projects per row on larger screens */
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
-.project-tile{
+.project-tile {
     overflow: hidden;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background: var(--secondary-background-color);
     padding-bottom: 10px;
     max-width: 350px;
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .project-tile:hover{
@@ -317,11 +328,11 @@ nav ul li a:hover::after{
     transition: transform 0.5s ease-out;
 }
 
-.project-tile img{
-    width:100%;
-    height:350px;
-    object-fit: contain;
-    border-bottom:3px solid var(--red-accent-color);
+.project-tile img {
+    width: 90%;
+    height: 300px; 
+    object-fit: contain; 
+    border-bottom: 3px solid var(--red-accent-color);
 }
 
 .project-title{
@@ -334,8 +345,12 @@ nav ul li a:hover::after{
 }
 
 .project-tile a{
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
     color:white;
+    align-items: center;
+    justify-content: center;
 }
 
 .project-tile p{
@@ -352,6 +367,8 @@ nav ul li a:hover::after{
     padding-top:60px;
     font-size: 24px;
 }
+
+
 
 /* CONTACT SECTION */
 #contact{
