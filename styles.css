@@ -222,6 +222,13 @@ nav ul li a:hover::after{
     font-size: 16px;
 }
 
+.experience-description{
+    margin-top: 6px;
+    color: rgb(207, 207, 207);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
 .tab-contents .company-name{
     font-size:20px;
     font-style: italic;
@@ -528,6 +535,10 @@ nav .fas{
     .tab-contents ul li span{
         font-size: 14px;
     }
+
+    .experience-description{
+        font-size: 14px;
+    }
     
     .tab-contents .company-name{
         font-size:14px;
@@ -575,6 +586,9 @@ nav .fas{
     #mobileConti{
         width: 300px;
     }
+    #mobileFinys{
+        width: 250px;
+    }
 
     /* PROJECTS SECTION  */
     #projects{
@@ -615,4 +629,3 @@ nav .fas{
     }
 
 }
-
