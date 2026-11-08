@@ -1,194 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, inital-scale=1.0"/>
-  <title>Zane Richards</title>
-  <link rel ="icon" href="images/Software_Dev_Logo.png">
-  <link rel = "stylesheet" href="styles.css"/>
-  <script src="https://kit.fontawesome.com/f4a5ea2dbc.js" crossorigin="anonymous"></script>
-  <script src="observer.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Zane Richards is a software developer focused on C#/.NET, insurance software, and third-party API integrations.">
+  <meta name="theme-color" content="#161616">
+  <title>Zane Richards | Software Developer</title>
+  <link rel="icon" href="images/Software_Dev_Logo.png">
+  <link rel="stylesheet" href="styles-redesign.css">
 </head>
-
-  <body>
-    <header>
-      <div class="nav-container">
-        <nav id="navbar">
-          <img src="images/Zane_Logo_2.png" class="logo" width="180px">
-          <ul id="nav-links">
-            <li><a class="nav-link" href="#welcome-section">Home</a></li>
-            <li><a class="nav-link" href="#about">About</a></li>
-            <li><a class="nav-link" href="#projects">Projects</a></li>
-            <li><a class="nav-link" href="#contact">Contact</a></li>
-            <i class="fas fa-times" onclick="closemenu()"></i>
-          </ul>
-          <i class="fas fa-bars" onclick="openmenu()" id="mobile-nav"></i>
-        </nav>
+<body>
+  <header class="site-header">
+    <nav class="site-nav content-width" aria-label="Main navigation">
+      <a class="wordmark" href="#home" aria-label="Zane Richards, home">
+        <span class="wordmark-mark" aria-hidden="true">ZR</span>
+        <span>Zane Richards</span>
+      </a>
+      <div class="nav-links">
+        <a href="#experience">Experience</a>
+        <a href="#work">Projects</a>
+        <a href="#about">About</a>
+        <a class="nav-contact" href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
       </div>
-    </header>
-    <div class="main-content">
-      
-      <!-- START WELCOME SECTION -->
-      <section id="welcome-section">
-        <div class="section-container">
-          <div id="welcome-text">
-            <h1 class="header-text">Hello, my name is Zane!</h1>
-            <h2>software developer</h2>
-          </div>
+    </nav>
+  </header>
 
-          <div id="welcome-img">
-            <img src="images/Software_Dev_Logo.png" id="welcome-logo">
-          </div>
+  <main>
+    <section class="hero content-width" id="home" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-mark" aria-hidden="true"></span> Software developer <span class="eyebrow-divider">/</span> Troy, Michigan</p>
+        <h1 id="hero-title">I’m Zane, a software developer building <span>useful, reliable software.</span></h1>
+        <p class="hero-summary">My work spans C#/.NET development, third-party API integrations, and the details that take software from requirements to production. I’m also interested in how AI-assisted development and agentic workflows can make building software better.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">Explore selected work <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#contact">Contact me <span aria-hidden="true">↗</span></a>
         </div>
-      </section>
-      <!-- END WELCOME SECTION  -->
+      </div>
+      <img class="hero-logo" src="images/Software_Dev_Logo.png" alt="" aria-hidden="true">
+    </section>
 
-      <!-- START ABOUT SECTION -->
-       <section id="about">
-        <div class="section-container">
-
-          <div id="about-col-1">
-            <img class="about-img fade-in" id="U_of_M" src="images/UM-Dearborn_Logo.png" width="225px">
-            <img class="about-img fade-in" id="Ford" src="images/Ford-Logo.png" width="350px">
-            <img class="about-img fade-in" id="Continental" src="images/Continental-Logo-Emblem.png" width="400px">
+    <section class="experience-section" id="experience" aria-labelledby="experience-title">
+      <div class="content-width">
+        <div class="section-heading experience-heading">
+          <div>
+            <p class="section-label">WHERE I’VE WORKED</p>
+            <h2 id="experience-title">Experience</h2>
           </div>
+          <p class="section-intro">Professional experience across software development, data analysis, and user experience.</p>
+        </div>
 
-          <div id="about-col-2">
-            <h1 class="sub-header-text">About me!</h1>
-            <p class="about-me">I am a Computer Science graduate from the University of Michigan Dearborn. 
-              I am looking to pursue a career in software development and have 3 years of internships at notable companies
-            such as Ford Motor Company and Continental Automotive. 
-          <br><br>
-          Now, equipped with a degree and a diverse skill set from my internships, I'm ready to begin a career in software development. 
-          My experiences have given me a deep appreciation for innovation and problem-solving. 
-          If you're looking for a versatile team player who thrives on adapting to new challenges and turning ideas into reality, 
-            let's connect and explore how I can bring a fresh perspective to your team!
-            </p>
-            <div class="tab-titles">
-                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                <p class="tab-links" onclick="opentab('education')">Education</p>
+        <ol class="experience-list">
+          <li class="experience-item">
+            <div class="experience-date">
+              <div class="experience-date-meta">
+                <div class="date-range">Aug 2024 — Present</div>
+              </div>
+              <div class="company-logo-wrap"><img class="company-logo" src="images/Finys-Logo.png" alt=""></div>
             </div>
-            <div class="tab-contents active-tab" id="skills">
-              <ul>
-                <li><span>Programming Languages</span><br>C++, Python, Java/Kotlin</li>
-                <li><span>Web Development</span><br>HTML, CSS, JavaScript, React, Django</li>
-                <li><span>Databases</span><br>SQL, MySQL, XAMPP, phpMyAdmin</li>
-                <li><span>General</span><br>Microsoft Office Suite</li>
+            <div class="experience-detail">
+              <div class="experience-company">
+                <div class="company-heading">
+                  <h3>Finys</h3>
+                  <h4>Software Developer</h4>
+                </div>
+              </div>
+              <p>Design and implement third-party insurance API integrations, translating vendor documentation and business requirements into reliable software. Own work from database design through testing and production handoff, coordinating deployments and troubleshooting with DevOps and implementation teams.</p>
+              <ul class="experience-tags" aria-label="Technologies and areas">
+                <li>C#</li><li>.NET</li><li>API integrations</li><li>Database design</li>
               </ul>
             </div>
-            
-            <div class="tab-contents" id="experience">
-              <ul>
-                <li><span>May 2022 - Feb 2024</span><br>App Developer Intern at <span class="company-name">Continental Automotive</span></li>
-                <li><span>May 2019 - Aug 2019</span><br>Service Asset Configuration Management Intern at <span class="company-name">Ford Motor Company</span></li>
-                <li><span>May 2017 - Aug 2017</span><br>UX Design Intern at <span class="company-name">Ford Motor Company</span></li>
-                <li><span>Aug 2021 - May 2022</span><br>Sales Associate at <span class="company-name">Ace Hardware</span></li>
+          </li>
+          <li class="experience-item">
+            <div class="experience-date">
+              <div class="experience-date-meta">
+                <div class="date-range">May 2022 — Feb 2024</div>
+              </div>
+              <div class="company-logo-wrap"><img class="company-logo" src="images/Continental-Logo-Emblem.png" alt=""></div>
+            </div>
+            <div class="experience-detail">
+              <div class="experience-company">
+                <div class="company-heading">
+                  <h3>Continental</h3>
+                  <h4>Application Developer Intern</h4>
+                </div>
+              </div>
+              <p>Built employee-facing applications with Microsoft PowerApps and SharePoint, including an IT inventory management app. Designed user-friendly interfaces and gained experience across the software development lifecycle.</p>
+              <ul class="experience-tags" aria-label="Technologies">
+                <li>PowerApps</li><li>SharePoint</li>
               </ul>
             </div>
-            
-            <div class="tab-contents" id="education">
-              <ul>
-                <li><span>University of Michigan - Dearborn 2023</span><br>Bachelor of Science in Computer Information Science </li>
-                <li id="honors-text">Graduated with Honors</li>
-              </ul>
+          </li>
+          <li class="experience-item">
+            <div class="experience-date">
+              <div class="experience-date-meta">
+                <div class="date-range">Aug 2021 — Jun 2022</div>
+              </div>
+              <div class="company-logo-wrap"><img class="company-logo" src="images/Ace-Hardware-Logo.png" alt=""></div>
             </div>
-            
-            <div class="slideshow">
-              <img src="images/UM-Dearborn_Logo.png" alt="Image 1" id="mobileUM">
-              <img src="images/Ford-Logo.png" alt="Image 2" id="mobileFord">
-              <img src="images/Continental-Logo-Emblem.png" alt="Image 3" id="mobileConti">
+            <div class="experience-detail">
+              <div class="experience-company">
+                <div class="company-heading">
+                  <h3>ACE Hardware</h3>
+                  <h4>Sales Associate</h4>
+                </div>
+              </div>
+              <p>Helped customers select products, answered questions, and resolved issues while collaborating with colleagues to support daily store operations.</p>
             </div>
+          </li>
+          <li class="experience-item">
+            <div class="experience-date experience-date-group">
+              <div class="experience-date-meta">
+                <div class="date-range">May 2019 — Aug 2019</div>
+                <div class="date-range">Jun 2017 — Aug 2017</div>
+              </div>
+              <div class="company-logo-wrap"><img class="company-logo" src="images/Ford-Logo.png" alt=""></div>
+            </div>
+            <div class="experience-detail">
+              <div class="experience-company">
+                <h3>Ford Motor Company</h3>
+              </div>
+              <div class="grouped-roles">
+                <article class="grouped-role">
+                  <div class="grouped-role-heading">
+                    <h4>Data Analyst Intern</h4>
+                  </div>
+                  <p>Analyzed HP UCMDB data against technology standards and architecture requirements to assess software consistency across systems.</p>
+                </article>
+                <article class="grouped-role">
+                  <div class="grouped-role-heading">
+                    <h4>UX Designer Intern</h4>
+                  </div>
+                  <p>Created a shuttle-system UI mockup and gathered user feedback on a timekeeping tool, including observing usability testing.</p>
+                </article>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
 
+    <section class="skills-section" aria-labelledby="skills-title">
+      <div class="content-width skills-layout">
+        <div>
+          <p class="section-label">TOOLS OF THE TRADE</p>
+          <h2 id="skills-title">Technical skills</h2>
+        </div>
+        <div class="skills-content">
+          <div class="skill-group">
+            <h3>Languages</h3>
+            <p>C#, SQL, Python</p>
+          </div>
+          <div class="skill-group">
+            <h3>Technologies</h3>
+            <p>.NET Framework, .NET 8/9, Entity Framework, REST APIs</p>
+          </div>
+          <div class="skill-group">
+            <h3>Development</h3>
+            <p>Git, GitHub, Azure DevOps, Unit Testing, API Integrations</p>
+          </div>
+          <div class="skill-group">
+            <h3>Tools</h3>
+            <p>Visual Studio, VS Code</p>
+          </div>
+          <div class="skill-group">
+            <h3>AI &amp; Agentic Development</h3>
+            <p>AI-assisted software development, Agentic workflows, custom agent skills, MCP integrations</p>
           </div>
         </div>
-       </section>
-       <!-- END ABOUT SECTION -->
+      </div>
+    </section>
 
-       <!-- START PROJECTS SECTION -->
-       <section id="projects">
-        <h1 class="sub-header-text">Some of my projects!</h1>
-        <p class="projects-subtext">Below are some of the projects I've worked on alone or with a team to create!</p>
-        <div class = "project-grid">
-
-          <div class="project-tile">
-            <a href="https://docs.google.com/document/d/1wfnqLarLc-Ka2FTi8_2DVsQppsvPPSZNyXSpCmYN_l4/edit?usp=sharing" target="_blank">
-              <img src="images/ADAS Logo.jpg" alt="Project Image">
-              <h2 class="project-title">Serverless ADAS</h2>
-            </a>
-            <a href="https://www.youtube.com/watch?v=SyNCcnqm1Sg" target="_blank">
-              <p>Demo Video</p>
-            </a>
-          </div>
-
-          <div class="project-tile">
-            <a href="https://github.com/zanerosu/Conf_Paper_Sys" target="_blank">
-              <img src="images/Review-Paper_Icon.png" alt="Conference Project Image">
-              <h2 class="project-title">Paper Review System</h2>
-            </a>
-            <a href="https://www.youtube.com/watch?v=54-GVcsoyQI" target="_blank">
-              <p>Demo Video</p>
-            </a>
-          </div>
-
-          <div class="project-tile">
-            <a href="https://github.com/zanerosu/smartSplitapp" target="_blank">
-              <img src="images/SmartsplitIcon.png" alt="SmartSplit Project Image">
-              <h2 class="project-title">SmartSplit</h2>
-            </a>
-          </div>
-
-          <div class="project-tile">
-            <a href="https://github.com/zanerosu/Odin_Project" target="_blank">
-              <img src="images/Odin_Project.png" alt="Odin Project Image">
-              <h2 class="project-title">Odin Project</h2>
-            </a>
-          </div>
-
-          <div class="project-tile">
-            <a href="https://github.com/zanerosu/zanerosu.github.io" target="_blank">
-              <img src="images/Zane_Logo_2.png" alt="Portfolio Project Image">
-              <h2 class="project-title">This Portfolio!</h2>
-            </a>
-          </div>
-
+    <section class="work-section content-width section-spacing" id="work" aria-labelledby="work-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-label">SELECTED WORK <span>01 — 06</span></p>
+          <h2 id="work-title">Projects</h2>
         </div>
+        <p class="section-intro">A selection of software projects built independently and with a team.</p>
+      </div>
 
-        <p class="more-projects">More projects to come!</p>
-
-       </section>
-       <!-- END PROJECTS SECTION -->
-       
-       <!-- START CONTACT SECTION -->
-       <section id="contact">
-        <h1>My socials!</h1>
-        <div class="section-container">
-          <div class="social-link">
-            <a id="profile-link" href="https://github.com/zanerosu" target="_blank">
-                <img src="images/github-icon.png" alt="github-icon" width="80px">
-                <p class="social-name">GitHub</p>
-            </a>
+      <div class="project-grid">
+        <article class="project-item">
+          <a class="project-image" href="https://docs.google.com/document/d/1wfnqLarLc-Ka2FTi8_2DVsQppsvPPSZNyXSpCmYN_l4/edit?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="View Serverless ADAS project overview">
+            <img src="images/ADAS Logo.jpg" alt="Serverless ADAS project graphic">
+          </a>
+          <div class="project-info">
+            <p class="project-index">PROJECT 01 <span>·</span> TEAM PROJECT</p>
+            <h3>Serverless ADAS</h3>
+            <div class="project-links">
+              <a href="https://docs.google.com/document/d/1wfnqLarLc-Ka2FTi8_2DVsQppsvPPSZNyXSpCmYN_l4/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Project overview <span aria-hidden="true">↗</span></a>
+              <a href="https://www.youtube.com/watch?v=SyNCcnqm1Sg" target="_blank" rel="noopener noreferrer">Demo video <span aria-hidden="true">↗</span></a>
+            </div>
           </div>
+        </article>
 
-          <div class="social-link">
-            <a href="https://www.linkedin.com/in/zane-richards01/" target="_blank">
-                <img src="images/linkedin-icon.png" alt="linkedin-icon" width="80px">
-                <p class="social-name">Linkedin</p>
-            </a>
+        <article class="project-item">
+          <a class="project-image" href="https://github.com/zanerosu/Conf_Paper_Sys" target="_blank" rel="noopener noreferrer" aria-label="View Paper Review System source code">
+            <img src="images/Review-Paper_Icon.png" alt="Paper Review System project graphic">
+          </a>
+          <div class="project-info">
+            <p class="project-index">PROJECT 02 <span>·</span> SOFTWARE</p>
+            <h3>Paper Review System</h3>
+            <div class="project-links">
+              <a href="https://github.com/zanerosu/Conf_Paper_Sys" target="_blank" rel="noopener noreferrer">Source code <span aria-hidden="true">↗</span></a>
+              <a href="https://www.youtube.com/watch?v=54-GVcsoyQI" target="_blank" rel="noopener noreferrer">Demo video <span aria-hidden="true">↗</span></a>
+            </div>
           </div>
+        </article>
 
-          <div class="social-link">
-            <a id="email-social" href="mailto:zanerosu@gmail.com">
-                <img src="images/email-icon.png" alt="email-icon" width="80px">
-                <p class="social-name">zanerosu@gmail.com</p>
-            </a>
+        <article class="project-item">
+          <a class="project-image" href="https://github.com/zanerosu/smartSplitapp" target="_blank" rel="noopener noreferrer" aria-label="View SmartSplit source code">
+            <img src="images/SmartsplitIcon.png" alt="SmartSplit project icon">
+          </a>
+          <div class="project-info">
+            <p class="project-index">PROJECT 03 <span>·</span> SOFTWARE</p>
+            <h3>SmartSplit</h3>
+            <div class="project-links">
+              <a href="https://github.com/zanerosu/smartSplitapp" target="_blank" rel="noopener noreferrer">Source code <span aria-hidden="true">↗</span></a>
+            </div>
           </div>
+        </article>
 
+        <article class="project-item">
+          <a class="project-image" href="https://github.com/zanerosu/Odin_Project" target="_blank" rel="noopener noreferrer" aria-label="View Odin Project source code">
+            <img src="images/Odin_Project.png" alt="Odin Project graphic">
+          </a>
+          <div class="project-info">
+            <p class="project-index">PROJECT 04 <span>·</span> SOFTWARE</p>
+            <h3>Odin Project</h3>
+            <div class="project-links">
+              <a href="https://github.com/zanerosu/Odin_Project" target="_blank" rel="noopener noreferrer">Source code <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-item">
+          <a class="project-image portfolio-image" href="https://github.com/zanerosu/zanerosu.github.io" target="_blank" rel="noopener noreferrer" aria-label="View portfolio website source code">
+            <img src="images/Zane_Logo_2.png" alt="Zane Richards portfolio wordmark">
+          </a>
+          <div class="project-info">
+            <p class="project-index">PROJECT 05 <span>·</span> WEB</p>
+            <h3>This Portfolio</h3>
+            <div class="project-links">
+              <a href="https://github.com/zanerosu/zanerosu.github.io" target="_blank" rel="noopener noreferrer">Source code <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-item project-in-progress">
+          <div class="project-image">
+            <img src="images/F1%20Logo.png" alt="Formula 1 logo">
+          </div>
+          <div class="project-info">
+            <p class="project-index">PROJECT 06 <span>·</span> IN PROGRESS</p>
+            <h3>F1 Data Analytics</h3>
+            <p class="project-description">In progress</p>
+          </div>
+        </article>
+      </div>
+      <p class="work-note">More projects and updates will be added as work progresses.</p>
+    </section>
+
+    <section class="about-section content-width section-spacing" id="about" aria-labelledby="about-title">
+      <div class="about-main">
+        <p class="section-label">BEYOND WORK</p>
+        <h2 id="about-title">Education &amp; interests.</h2>
+        <p>I graduated with honors from the University of Michigan-Dearborn with a B.S. in Computer Information Science.</p>
+        <p>Outside of work, I enjoy motorsports and Formula 1.</p>
+      </div>
+      <aside class="education-note">
+        <img class="education-logo" src="images/UM-Dearborn_Logo.png" alt="">
+        <p class="section-label">EDUCATION</p>
+        <h3>University of Michigan–Dearborn</h3>
+        <p>B.S. Computer Information Science</p>
+        <p class="education-date">2023 <span>·</span> Graduated with honors</p>
+      </aside>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="content-width contact-layout">
+        <div>
+          <p class="section-label">HAVE A PROJECT OR OPPORTUNITY?</p>
+          <h2 id="contact-title">Let’s connect.</h2>
+          <p class="contact-copy">I’m happy to talk about software, engineering work, and new ideas.</p>
         </div>
-       </section>
-       <!-- END CONTACT SECTION -->
-    </div>
-    
+        <div class="contact-links">
+          <a href="mailto:zanerosu@gmail.com"><img src="images/email-icon.png" alt="" aria-hidden="true"><span class="contact-link-label">zanerosu@gmail.com</span><span class="contact-link-arrow" aria-hidden="true">↗</span></a>
+          <a href="https://www.linkedin.com/in/zane-richards01/" target="_blank" rel="noopener noreferrer"><img src="images/linkedin-icon.png" alt="" aria-hidden="true"><span class="contact-link-label">LinkedIn</span><span class="contact-link-arrow" aria-hidden="true">↗</span></a>
+          <a href="https://github.com/zanerosu" target="_blank" rel="noopener noreferrer"><img src="images/github-icon.png" alt="" aria-hidden="true"><span class="contact-link-label">GitHub</span><span class="contact-link-arrow" aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  </body>
+  <footer class="site-footer content-width">
+    <a class="wordmark footer-wordmark" href="#home"><span class="wordmark-mark" aria-hidden="true">ZR</span><span>Zane Richards</span></a>
+    <p>Software Developer <span>·</span> Troy, Michigan</p>
+    <a class="back-to-top" href="#home">Back to top ↑</a>
+  </footer>
+</body>
 </html>
