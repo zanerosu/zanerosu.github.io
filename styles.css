@@ -142,6 +142,22 @@ img {
   filter: drop-shadow(0 0 42px rgb(255 49 88 / 12%));
 }
 
+.motion-ready .hero-logo.animate-in {
+  animation: logo-enter 650ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes logo-enter {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 .eyebrow,
 .section-label,
 .project-index {
@@ -347,6 +363,31 @@ img {
   display: flex;
   flex-direction: column;
   border: 1px solid var(--line);
+}
+
+.motion-ready .project-item.will-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 450ms ease var(--reveal-delay, 0ms),
+    transform 450ms ease var(--reveal-delay, 0ms),
+    border-color 180ms ease;
+}
+
+.motion-ready .project-item.will-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .project-item {
+    transition: transform 180ms ease, border-color 180ms ease;
+  }
+
+  .project-item:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+  }
 }
 
 .project-image {
@@ -987,6 +1028,15 @@ img {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .motion-ready .hero-logo.animate-in {
+    animation: none;
+  }
+
+  .motion-ready .project-item.will-reveal {
+    opacity: 1;
+    transform: none;
   }
 
   *,
